@@ -1,0 +1,16 @@
+{
+  "name": "React Express Mono Repo",
+  "description": "A Mono Repo using React and Express",
+  "categories": ["Backend", "Frontend"],
+  "icon": "https://www.gstatic.com/monospace/231115/logo_nodejs.svg",
+  "publisher": "Srivats Venkataraman",
+  "params": [
+    {
+      "id": "typescript",
+      "name": "Use TypeScript?",
+      "type": "boolean",
+      "default": false,
+      "required": true
+    }
+  ]
+}
