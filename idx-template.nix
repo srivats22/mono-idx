@@ -6,7 +6,7 @@
     mkdir "$out"
     mkdir -p "$out/.idx/" "$out/client" "$out/server"
     cp -rf ${./dev.nix} "$out/.idx/dev.nix"
-    [ "$typescript" = "true" ]; then
+    if [ "$typescript" == "true" ]; then
       shopt -s dotglob; cp -r ${./monorepo-ts/client}/* "$out/client"
       shopt -s dotglob; cp -r ${./monorepo-ts/server}/* "$out/server"
     else
