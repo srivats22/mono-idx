@@ -6,13 +6,8 @@
     mkdir "$out"
     mkdir -p "$out/.idx/" "$out/client" "$out/server"
     cp -rf ${./dev.nix} "$out/.idx/dev.nix"
-    if [ "$typescript" == "true" ]; then
-      shopt -s dotglob; cp -r ${./monorepo-ts/client}/* "$out/client"
-      shopt -s dotglob; cp -r ${./monorepo-ts/server}/* "$out/server"
-    else
-      shopt -s dotglob; cp -r ${./monorepo/client}/* "$out/client"
-      shopt -s dotglob; cp -r ${./monorepo/server}/* "$out/server"
-    
+    cp -rf ${./monorepo}${if typescript then "-ts" else ""}/client "$out/client"
+    cp -rf ${./monorepo}${if typescript then "-ts" else ""}/server "$out/server"
     chmod -R +w "$out"
   '';
 }
