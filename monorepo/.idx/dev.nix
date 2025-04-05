@@ -23,9 +23,9 @@
     };
     previews = {
       enable = true;
-      cwd = "client";
       previews = {
         web = {
+          cwd = "client";
           command = ["npm" "run" "dev" "--" "--port" "$PORT"];
           manager = "web";
         };
