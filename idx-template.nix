@@ -4,8 +4,8 @@
   ];
   bootstrap =
     ''
-      cp -rf ${./monorepo}/* "$WS_NAME"
-      chmod -R +w "$WS_NAME"
-      mv "$WS_NAME" "$out"
+      mkdir "$out"
+      shopt -s dotglob; cp -r ${./monorepo}/* "$out"
+      chmod -R +w "$out"
     '';
 }
