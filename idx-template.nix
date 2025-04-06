@@ -1,11 +1,11 @@
-{ pkgs, typescript ? false, ... }: {
+{ pkgs, language ? "js", ... }: {
   packages = [
     pkgs.nodejs_20
   ];
   bootstrap =
     ''
       mkdir "$out"
-      if [ "${typescript}" == "true" ]; then
+      if [ "${language}" == "ts" ]; then
         shopt -s dotglob
         cp -r ${./monorepo-ts}/* "$out"
       else
