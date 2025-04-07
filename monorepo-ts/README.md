@@ -21,7 +21,7 @@ A one-click template for a Mono repository setup inside Project IDX
 2. Make the backend port a public Port
 <img width="329" alt="Screenshot 2025-04-06 at 9 40 50 PM" src="https://github.com/user-attachments/assets/be7d8125-da35-4369-b420-1df9a126fc60" />
 
-3. Open either ```client/src/App.js``` or ```client/src/App.tsx``` based on the template you choose
+3. Open ```client/src/App.tsx``` based on the template you choose
 4. Replace line 10 with the Public Port URL
 5. Click the Button in the preview to ensure everything is working as expected
 6. You should see the message ```Hello World!``` if the api connection is successful
