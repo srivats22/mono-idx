@@ -5,6 +5,7 @@
   bootstrap =
     ''
       mkdir "$out"
+      cp -r ${./README.md} "$out"
       if [ "${language}" == "ts" ]; then
         shopt -s dotglob
         cp -r ${./monorepo-ts}/* "$out"
