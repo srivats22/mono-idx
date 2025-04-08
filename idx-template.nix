@@ -5,6 +5,8 @@
   bootstrap =
     ''
       mkdir "$out"
+      mkdir -p "$out/.idx/"
+      cp -rf ${./dev.nix} "$out/.idx/dev.nix"
       cp -r ${./README.md} "$out"
       if [ "${language}" == "ts" ]; then
         shopt -s dotglob

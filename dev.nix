@@ -15,7 +15,7 @@
       onCreate = {
         server-npm-install = "cd server && npm ci --no-audit --prefer-offline --no-progress --timing";
         client-npm-install = "cd client && npm ci --no-audit --prefer-offline --no-progress --timing";
-        default.openFiles = ["README.md" "client/src/App.tsx"]
+        default.openFiles = ["README.md" "client/src/App.jsx" "client/src/App.tsx"];
       };
       # Runs when a workspace is (re)started
       onStart= {
